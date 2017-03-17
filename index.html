@@ -173,9 +173,12 @@
                     //     $("#wrongcounter").attr("src", "assets/images/hangwrong6.gif")
                     // }
                     $("#wrongcounter").attr("src", "assets/images/hangwrong" + wrong +".gif");
+                    if (wrong===6){
+                        alert("Sorry you lose. Press reset for another word.")
+                    }
                     if (words[randomnumber].length === wincounter) {
                         wins++;
-                        alert("Yay you win! You've won " + wins + " times.");
+                        alert("Yay you win! You've won " + wins + " times.  Pres reset for another word.");
                     }
                     $("#usersee").html("<h1>" + userseediv + "</h1>");
                     $("#lettersused").html("<h2>" + letters + "</h2>");
