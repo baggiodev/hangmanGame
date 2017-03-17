@@ -14,7 +14,7 @@
     <div class ="container">
     <div class = "row">
       <div class = "col-md-6">
-      <img src = "assets/images/hangreset.gif" id="wrongcounter">
+      <img src = "assets/images/hangwrong0.gif" id="wrongcounter">
       </div>
       <div class = "col-md-6" id="usersee">
 
@@ -98,7 +98,7 @@
             $("#lettersused").html("<h2>" + letters + "</h2>");
 
             wincounter = 0;
-            $("#wrongcounter").attr("src", "assets/images/hangreset.gif")
+            $("#wrongcounter").attr("src", "assets/images/hangwrong0")
         }
         var words = ["elephant", "tiger", "zebra", "lion", "giraffe", "leopard", "rhino", "cheetah", "buffalo", "hippopotamus", "crocodile"];
         var userguess = "";
@@ -153,25 +153,26 @@
                             wrong++
                         }
                     }
-                    if (wrong === 1) {
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong1.gif")
-                    }
-                    if (wrong === 2) {
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong2.gif")
-                    }
-                    if (wrong === 3) {
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong3.gif")
-                    }
-                    if (wrong === 4) {
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong4.gif")
-                    }
-                    if (wrong === 5) {
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong5.gif")
-                    }
-                    if (wrong === 6) {
-                        alert("Sorry you lose press reset to get a new word");
-                        $("#wrongcounter").attr("src", "assets/images/hangwrong6.gif")
-                    }
+                    // if (wrong === 1) {
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong1.gif")
+                    // }
+                    // if (wrong === 2) {
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong2.gif")
+                    // }
+                    // if (wrong === 3) {
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong3.gif")
+                    // }
+                    // if (wrong === 4) {
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong4.gif")
+                    // }
+                    // if (wrong === 5) {
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong5.gif")
+                    // }
+                    // if (wrong === 6) {
+                    //     alert("Sorry you lose press reset to get a new word");
+                    //     $("#wrongcounter").attr("src", "assets/images/hangwrong6.gif")
+                    // }
+                    $("#wrongcounter").attr("src", "assets/images/hangwrong" + wrong +".gif");
                     if (words[randomnumber].length === wincounter) {
                         wins++;
                         alert("Yay you win! You've won " + wins + " times.");
